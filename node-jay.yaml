@@ -1,1 +1,14 @@
+name: node-jay
+app: node@22
+options:
+  env:
+    - name: NODE_ENV
+      value: production
+  ports: 3000
 start: node ./bin/www
+install: npm ci
+buildenv: []
+context:
+  git:
+    url: https://github.com/seojeongju/node-jay.git
+preset: node
